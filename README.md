@@ -1,9 +1,9 @@
-# PHP-SportsData
+# PHP-Sportradar
 
-PHP-SportsData is designed to be an easy-to-use wrapper around the [The SportsData API](http://developer.sportsdatallc.com/).
+PHP-Sportradar is designed to be an easy-to-use wrapper around the [The Sportradar API](http://developer.sportradar.us/).
 You must first register an account to receive an API key.
 
-PHP-SportsData is meant to become a full list of the SportsData API calls available. Currently, I have only focused on the API calls for the NFL, but my roadmap for this project includes all of the other sports they offer.
+PHP-Sportradar is meant to become a full list of the Sportradar API calls available. Currently, I have only focused on the API calls for the NFL, but my roadmap for this project includes all of the other sports they offer.
 
 ##Example Usage
 ```php
@@ -17,7 +17,7 @@ PHP-SportsData is meant to become a full list of the SportsData API calls availa
 
 ### NFL
 
-Go to <a href="http://developer.sportsdatallc.com/docs/read/NFL_API">SportsData NFL API</a> for full documentation.
+Go to <a href="http://developer.sportradar.us/docs/read/NFL_API">Sportradar NFL API</a> for full documentation.
 
 * [SportsDataNfl](#SportsDataNfl)
 * [weekly_schedule](#weekly_schedule)
