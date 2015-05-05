@@ -8,7 +8,7 @@ require_once 'SportsData.php';
 
 class SportsDataNfl extends SportsData {
 	
-	private $base_url = "api.sportsdatallc.org/nfl-";
+	private $base_url = "api.sportradar.us/nfl-";
 	private $version; // Whole number (sequential, starting with the number 1)
 	private $season; // Preseason (PRE), Regular Season (REG), Postseason (PST)
 	private $season_valid = array('PRE','REG','PST');
