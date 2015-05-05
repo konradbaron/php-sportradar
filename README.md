@@ -3,11 +3,11 @@
 PHP-Sportradar is designed to be an easy-to-use wrapper around the [The Sportradar API](http://developer.sportradar.us/).
 You must first register an account to receive an API key.
 
-PHP-Sportradar is meant to become a full list of the Sportradar API calls available. Currently, I have only focused on the API calls for the NFL, but my roadmap for this project includes all of the other sports they offer.
+PHP-Sportradar is meant to become a full list of the Sportradar API calls available. Currently, I have only focused on the API calls for the NFL and MMA, but my roadmap for this project includes all of the other sports they offer.
 
 ##Example Usage
 ```php
-// Instantiate the class
+// Instantiate
     $nflData = new SportsDataNfl(YOUR_API_KEY,NFL_SEASON,YEAR,WEEK,VERSION,ACCESS_LEVEL,FORMAT,SECURE);
 // Get current standings
     $nflData->standings();
@@ -15,6 +15,9 @@ PHP-Sportradar is meant to become a full list of the Sportradar API calls availa
 
 ## Documentation
 
+[Go to NFL documentation](#NFLdocumentation)
+[Go to MMA documentation](#MMAdocumentation)
+<a name="NFLdocumentation" />
 ### NFL
 
 Go to <a href="http://developer.sportradar.us/docs/read/NFL_API">Sportradar NFL API</a> for full documentation.
@@ -44,7 +47,7 @@ Go to <a href="http://developer.sportradar.us/docs/read/NFL_API">Sportradar NFL 
 <a name="SportsDataNfl" />
 ### SportsDataNfl(api_key,nfl_season,year,week,version,access_level,format,secure)
 
-Instantiate the object
+Instantiate
 
 __Arguments__
 
@@ -348,4 +351,89 @@ __Example__
    $nflData->seasonal_statistics('HOU');
 ```
 
+<a name="MMAdocumentation" />
+### MMA
 
+Go to <a href="http://developer.sportradar.us/docs/MMA_API">Sportradar MMA API</a> for full documentation.
+
+* [SportsDataMma](#SportsDataMma)
+* [schedule](#schedule)
+* [event_results](#event_results)
+* [participant_list](#participant_list)
+* [participant_profile](#participant_profile)
+
+## MMA API
+
+<a name="SportsDataMMA" />
+### SportsDataMma(api_key,version,access_level,format,secure)
+
+Instantiate
+
+__Arguments__
+
+* api_key - Your API key
+* version - Whole number (sequential, starting with the number 1)
+* access_level - Real-Time (rt), Premium (p), Standard (s), Basic (b), Trial (t)
+* format - Format call will be returned (xml, json)
+* secure - Boolean (true,false) to send on http or https
+
+__Example__
+```php
+   $mmaData = new SportsDataMma(YOUR_API_KEY,1,'t','json',false);
+```
+
+---------------------------------------
+
+<a name="schedule" />
+### schedule()
+
+Returns upcoming mma fight schedule
+
+__Example__
+```php
+   $mmaData->schedule();
+```
+
+---------------------------------------
+
+<a name="event_results" />
+### event_results(event_id)
+
+Returns results of specified event
+
+__Arguments__
+
+* event_id - unique event id
+
+__Example__
+```php
+   $mmaData->event_results('b5ceb386-e8b7-45d7-bd26-49ffff34cd9f');
+```
+
+---------------------------------------
+
+<a name="participant_list" />
+### participant_list()
+
+Returns list of mma fighters
+
+__Example__
+```php
+   $mmaData->participant_list();
+```
+
+---------------------------------------
+
+<a name="participant_profile" />
+### participant_profile(fighter_id)
+
+Returns fighter profile
+
+__Arguments__
+
+* fighter_id - unique fighter id
+
+__Example__
+```php
+   $mmaData->participant_profile('01b8c502-796d-4fd8-bb44-622b5cd4ac58');
+```
