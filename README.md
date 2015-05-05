@@ -15,8 +15,9 @@ PHP-Sportradar is meant to become a full list of the Sportradar API calls availa
 
 ## Documentation
 
-[Go to NFL documentation](#NFLdocumentation)
-[Go to MMA documentation](#MMAdocumentation)
+* [Go to NFL documentation](#NFLdocumentation)
+* [Go to MMA documentation](#MMAdocumentation)
+
 <a name="NFLdocumentation" />
 ### NFL
 
@@ -364,7 +365,7 @@ Go to <a href="http://developer.sportradar.us/docs/MMA_API">Sportradar MMA API</
 
 ## MMA API
 
-<a name="SportsDataMMA" />
+<a name="SportsDataMma" />
 ### SportsDataMma(api_key,version,access_level,format,secure)
 
 Instantiate
